@@ -8,10 +8,10 @@ public class Calculator {
 	 * @param j
 	 * @return int
 	 */
-	public int add(int i, int j){
-		return i+j;
+	public int add(int a, int b){
+		return a+b;
 	}
-	public int multiply(int i, int j){
-		return i*j;
+	public int multiply(int a, int b){
+		return a*b;
 	}
 }
