@@ -6,6 +6,9 @@
 	<packaging>war</packaging>
 	<version>0.0.1</version>
 	<name>my-app</name>
+  <properties>
+         <project.build.sourceEncoding>UTF8</project.build.sourceEncoding>
+  </properties>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
