@@ -15,6 +15,18 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+	<distributionmManagement>
+	<repository>
+		<id>deployment</id>
+		<name>Internal Release</name>
+		<url>http://localhost:8081/repository/Sample-Release/</url>
+	</repository>
+	<snapshotRepository>
+		<id>deployment</id>
+		<name>Internal Snapshot Release</name>
+		<url>http://localhost:8081/repository/Sample-Snapshot/</url>
+	</snapshotRepository>
+</distributionManagement>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -42,5 +54,4 @@
         </plugin>
     </plugins>
 </build>
-	
 </project>
