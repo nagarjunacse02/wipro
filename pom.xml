@@ -23,7 +23,7 @@
 		</dependency>
 	
 	</dependencies>
-	<distributionmManagement>
+	<distributionManagement>
 		<repository>
 			<id>deployment</id>
 			<name>Internal Release</name>
