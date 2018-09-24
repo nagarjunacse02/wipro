@@ -34,7 +34,7 @@
 			<name>Internal Snapshot Release</name>
 			<url>http://10.199.0.255:8081/repository/Sample-Snapshot/</url>
 		</snapshotRepository>
-</distributionManagement>
+	</distributionManagement>
 	
 <build>
     <plugins>
