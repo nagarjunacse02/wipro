@@ -25,12 +25,12 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-			<id>deployment</id>
+			<id>Nexus-3</id>
 			<name>Internal Release</name>
 			<url>http://localhost:8081/repository/Sample-Release/</url>
 		</repository>
 		<snapshotRepository>
-			<id>deployment</id>
+			<id>Nexus-3</id>
 			<name>Internal Snapshot Release</name>
 			<url>http://localhost:8081/repository/Sample-Snapshot/</url>
 		</snapshotRepository>
