@@ -1,0 +1,30 @@
+Id CommandLine                                                                                                                                                         
+  -- -----------                                                                                                                                                         
+   1 vault status                                                                                                                                                        
+   2 vault login hvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxgB                                                
+   3 $Env:Path += [IO.Path]::PathSeparator + 'C:\Users\lc5729612\vault'                                                                                                  
+   4 $env:PATH                                                                                                                                                           
+   5 $env:VAULT_ADDR="https://hxxxxxxxxxxxxes.com"                                                                                                               
+   6 $env:VAULT_NAMESPACE="Axxxxxxxx"                                                                                                                                 
+   7 vault status                                                                                                                                                        
+   8 vault login hvs.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxgB                                                
+   9 vault policy list                                                                                                                                                   
+  10 vault list auth/approle/role                                                                                                                                        
+  11 vault list auth/approle/ibsmas-np-role                                                                                                                              
+  12 vault read sys/auth/approle/tune                                                                                                                                    
+  13 vault read sys/auth/approle/ibsmas-np-role                                                                                                                          
+  14 vault read auth/approle/role/ibsmas-np-role                                                                                                                         
+  15 vault read auth/approle/role/ibsmas-np-role/role-id                                                                                                                 
+  16 vault write -f auth/approle/role/ibsmas-np-role/secret-id                                                                                                           
+  17 vault auth enable -max-lease-ttl=365d approle                                                                                                                       
+  18 vault write auth/approle/role/ibsmas-np-role  secret_id_ttl=365d  token_ttl=60m  token_max_ttl=120m  policies="ibsmas_np-policy"                                    
+  19 vault read auth/approle/role/ibsmas-np-role/role-id                                                                                                                 
+  20 vault write -f auth/approle/role/ibsmas-np-role/secret-id                                                                                                           
+  21 vault status                                                                                                                                                        
+  22 vault write auth/approle/role/ibsmas-np-role  secret_id_ttl=365d  token_ttl=60m  token_max_ttl=120m  policies="ibsmas-np-policy"                                    
+  23 vault write -f auth/approle/role/ibsmas-np-role/secret-id                                                                                                           
+  24 vault read auth/approle/role/ibsmas-np-role/role-id                                                                                                                 
+  25 vault kv put ibsmas_kv/rvm/db-creds user="serviceaccount" secret_value="needtoupdatethebitbucketpwd" port="123456"                                                  
+  26 vault kv get ibsmas_kv/rvm/db-creds  
+  
+  vault write auth/approle/role/ibs_dev_role  secret_id_ttl=365d  token_ttl=60m  token_max_ttl=120m  policies="ibs_policy"
