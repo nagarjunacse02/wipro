@@ -1,0 +1,129 @@
+NAGARJUNA GORANTLA
+DevSecOps Engineer					Contact: +91-9347972335
+E-mail: tech.gorantlanagarjuna@gmail.com
+LinkedIn: nagarjuna-gorantla-99954a159/
+													
+OVERVIEW:
+Successfully implemented DevOps practices in various organizations to improve efficiency, scalability, and reliability. Looking for challenging opportunities to share my expertise and contribute to the growth of the organization.
+
+PROFESSIONAL SUMMARY:
+Having Overall 5.5 years of experience, with 5.5 years of experience as DevOps and SecOps Engineer which includes implementation of DevOps methodology & SDLC, Agile development and skilled in AWS, IBM Cloud, GitHub, Bitbucket, Terraform, Jenkins, Bamboo, UrbanCode Deploy, XlRerelease, XlDeploy, Ansible, Docker, and Kubernetes.
+Infrastructure management:
+Experience in design, deployment automation of Legacy/Monolithic/Microservices applications and knowledge on IAAS, PAAS & SAAS 
+Experience in AWS services like EC2, VPC, S3, EBS, ELB, Cloud watch, RDS, ECS, and IAM, EKS, Route53, Cloud front. 
+Experience in provisioning, monitoring, and scaling infrastructure using Terraform.
+Continuous Integration/Continuous Deployment (CI/CD): 
+Experience to implement and manage CI/CD pipelines for faster software delivery.
+Experience in configuring, deploying, and managing these pipelines using tools like GitHub, Bitbucket, Bamboo, Jenkins, XlRelease, XlDeploy, Ansible, Docker and Kubernetes. 
+Worked various application development environments like Java, .net, etc.  
+Expertise in trouble shooting and fixing the build & deployment issues. 
+Containerization and Orchestration: 
+Create and deploy dockerized applications and orchestrated using Kubernetes cluster 
+Proficient in design and manage Kubernetes clusters on multi-region, Cloud (EKS) and on-prem environments (Kubeadm).
+Security: 
+Experience in implementing security best practices at all stages of the Secure SDLC 
+Good understanding on DevSecOps to improve the security of the organization. 
+Experience in configuring SSL certificates to secure the web URLs and load balancers. 
+Experience on integrating SAST tools like HPFortify, SonarQube scanners with CICD pipelines. 
+Experience on creating and managing IAM roles and polices to secure the AWS resources. 
+Experience on Infrastructure Security and hardening the OS 
+Good understanding of security concepts like IPSec/TLS, PKI and Key management 
+Good Knowledge and experience on Network Security Firewalls, Application Lifecycle Management, Incident, Change & Release Management and ITIL process.
+Automation: 
+Experience in automating processes such as builds, deployments, and testing using tools such as Jenkins, Ansible, K8s, Data pipelines using S3, Lambda, Glue, Redshift, Athena
+Experience in building end to end data pipelines by integrating data from various data sources of different data formats and creating simple/complex data pipelines by implementing various transformations as per the business user requirements. 
+Experience in configuring automatic scaling of pods using labels, selectors on cluster nodes, scheduling the pods on specific nodes as per the requirement. 
+Experience in AWX and writing the Ansible playbooks as per the requirement.
+Experience in automation and Python, Shell scripting and YAML, Groovy 
+Expertise using Terraform to build reusable infrastructure to deploy interconnected systems in multiple environments at moment’s notice 
+Monitoring and logging: 
+Proficiency in centralized logging/metrics using tools like Grafana & Prometheus.
+Expertise in creating the dashboards and configuring the metrics & alerts using monitoring LogDNA.
+Technical Skills:
+	Operating Systems: LINUX, WINDOWS
+	Clod Computing: AWS, IBM Cloud
+	Infrastructure as code (IaC): Terraform
+	Containerization	: Docker, Kubernetes
+Configuration Management: Ansible, Chef (Knowledge)
+	Source Code Management: GitHub, Bitbucket
+	Build Tools: Maven, npm
+	CI/CD Tools: Jenkins, Bamboo, XL-Release, UrbanCode Deploy, XL-Deploy
+	Artifactory Repo	: Sonatype Nexus, JFrog
+	Project Management Tools: Jira, SNOW, Vulnerability Advisor, Secret-Report-Generator
+	Access management: IAM, RBAC
+	Enterprise wiki: Confluence, SharePoint
+	Scripting Languages: Shell, Yaml, Python Scripting 
+	ETL Tools on cloud: S3, Lambda
+Serverless Services: Elastic beanstalk, FarGate, AWS Lambda
+Application code scanners: SonarQube, HP Fortify
+	Security Tools: Hashicorp Vault, 1Password
+Software Development Methodologies: Agile, Scrum, Wate
+	
+
+
+
+
+
+
+
+Professional Experience: 
+Working as Associate Consultant in HCL Technologies Limited, Bengaluru from Dec 2021 to till date.
+Working as Senior Project Engineer in Wipro Technologies, Bengaluru from Jan 2020 to Nov-2021.
+Worked as Senior Project Engineer in Wipro Technologies, Bengaluru from May 2018 to Dec-2020.
+
+Education:
+B. Tech from JNTU – Anatapure, Andhra Pradesh in the year 2013
+Employer	: HCL Technologies Limited
+Client		: IBM
+Duration	: Dec-2021 to till date
+Responsibilities:
+Working as Vault administrator.
+Secret-management and certificate-management.
+Maintaining vault servers (Unsealing the vault services if vault services get sealed).
+Incident response management (PagerDuty).
+Creating vault access to the application developers by referring RBAC sheets. 
+Creating vault test-certificates (cert file & key files) to the user.
+Creating role_id & secret_id to the specific functional id’s and load them into the vault kv paths.
+Rotating the secrets as per the rotation policy.
+Deleting the secrets from vault paths if it any request.
+As a vault admin used to generate and share self-signed certificates with developers over 1password in any exceptional cases.
+I have worked on settingup LogDNA notifications to slack channel if any issues on Vault servers.
+Using Nessus to find the issues in vault base images and fix them by connecting with Hashicorp team.
+Rotating secrets and restarting ReplicaSets to pick-up newly created Certificates, Api-Keys, Passwords and Client-Keys to minimize secrets expiry issues.
+Creating Jira and SNOW reports for higher management.
+Environment: GitHub, Jira, ServiceNow, IBM Cloud, Hashicorp Vault, 1Password, PagerDuty, Secret-Report-Generator and Nessus.
+
+Employer	: Wipro Technologies Ltd
+Client		: Roads and Maritime Services
+Duration	: Jan-2020 to Nov-2021
+Responsibilities: 
+Used SNOW to create the ticket and update the build history into the Snow for tracking build status.
+Used Bitbucket as Source code management.
+Infrastructure provisioning for AWS services (EC2, S3 buckets, EBS Volumes, Load balancers, VPC, Subnets, Internet Gateway, IP Route tables, Security groups) using Terraform. 
+Created AWS Infra and Database servers using Terraform Code.
+Applied Ingress and Egress rules to allow and deny connection between different application servers.
+Implemented Continuous Integration with Bitbucket, Jenkins, XL-Release, xl-Deploy and Jfrog for creating the AWS service using Terraform script.
+Deployed packaged Infra Code into Terraform enterprise using XL-Deploy in-order to implement the changes.
+Installed required software’s and tools like MySql, Oracle, Grafana, using Ansible playbooks through Ansible-Tower.
+Maintaining user accesses to application servers using RBAC (Creating AD groups and adding users to the created AD groups as per RBAC sheet).
+Creating user access to different tools like: Jenkins, Bitbucket, JFrog and Ansible tower based on RBAC sheet.
+Created DB pipelines to deploy the MSSQL/Oracle into the db servers.
+Environment: Linux, SNOW, Bitbucket, Jenkins, Jfrog Artifactory, XL-Release, XL-Deploy, Ansible Tower, Terraform, Shell Scripting and AWS.
+
+Employer	: Wipro Technologies Ltd
+Client		: Australia and New Zealand Banking Group Ltd
+Duration	: May-2018 to Dec-2019
+Responsibilities: 
+Used JIRA tool to create and update user stories and also for tracking project status.
+working on Bamboo to implement CI & CD processes
+Used Bitbucket as Source code management.
+Created Continuous Integration using Bitbucket, Bamboo, Maven and JFrog Artifactory.
+Integrated SonarQube with Bamboo to Scan the project code and collects metrics based on sonar rules and quality gates.
+Integrating Fortify with Bamboo to analyze source code and security vulnerbilities during the development phase.
+Automating Application Deployment using Bamboo and Urban Code Deployment (uDeploy).
+Calling the uDeploy flow using Bamboo plan for Automating the Application Deployment.
+Implemented CI plan to Create Docker Images for Microservices environment. 
+Created Docker images using a Docker file, worked on Docker container snapshots, removing images,
+and managing Docker volumes.
+Fixed bugs on the build and deploy platform.
+Environment: Linux, Jira, Bitbucket, Bamboo, Maven, Artifactory, SonarQube, Shell Scripting, Urban Code Deploy (UCD), Docker and WebSphere.
