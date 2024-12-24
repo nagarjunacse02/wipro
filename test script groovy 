@@ -1,0 +1,129 @@
+If you don’t have an API token but only a service account username and password, you can still query Jenkins using Basic Authentication. However, retrieving job details based on a commit ID requires additional steps since Jenkins does not provide a direct endpoint to search builds by commit ID. You’ll need to:
+
+1. Retrieve all builds of the job.
+
+
+2. Query each build to check if the commit ID is present in its metadata.
+
+
+
+Here’s how you can do this using Basic Authentication (username and password):
+
+
+---
+
+Steps to Query Jenkins API
+
+Step 1: Get All Builds of a Job
+
+Fetch the list of builds for the job to iterate over:
+
+curl -u <service_account>:<password> "http://<jenkins_url>/job/<job_name>/api/json?tree=builds[number,url]"
+
+Step 2: Check Each Build for Commit ID
+
+For each build, query the gitCommit details:
+
+curl -u <service_account>:<password> "http://<jenkins_url>/job/<job_name>/<build_number>/api/json?tree=actions[lastBuiltRevision[SHA1]]"
+
+Filter the builds where SHA1 matches the desired commit ID.
+
+Step 3: Get Build Status and Console Output
+
+Once the matching build is found, retrieve its status:
+
+curl -u <service_account>:<password> "http://<jenkins_url>/job/<job_name>/<build_number>/api/json?tree=result"
+
+Fetch the console output:
+
+curl -u <service_account>:<password> "http://<jenkins_url>/job/<job_name>/<build_number>/consoleText"
+
+
+---
+
+Python Script to Automate the Process
+
+Here’s a Python script to find the build based on the commit ID and retrieve its status and console output:
+
+import requests
+
+# Jenkins Configuration
+JENKINS_URL = "http://<jenkins_url>"
+JOB_NAME = "<job_name>"
+COMMIT_ID = "<commit_id>"
+USERNAME = "<service_account>"
+PASSWORD = "<password>"
+
+def get_build_by_commit(jenkins_url, job_name, commit_id, username, password):
+    builds_url = f"{jenkins_url}/job/{job_name}/api/json?tree=builds[number,url]"
+    auth = (username, password)
+    
+    # Fetch all builds
+    builds_response = requests.get(builds_url, auth=auth)
+    if builds_response.status_code != 200:
+        return None, f"Error fetching builds: {builds_response.status_code}"
+    
+    builds = builds_response.json().get("builds", [])
+    
+    for build in builds:
+        build_url = f"{build['url']}api/json?tree=actions[lastBuiltRevision[SHA1]],result"
+        build_details_response = requests.get(build_url, auth=auth)
+        if build_details_response.status_code != 200:
+            continue
+        
+        build_details = build_details_response.json()
+        actions = build_details.get("actions", [])
+        
+        for action in actions:
+            last_built_revision = action.get("lastBuiltRevision", {})
+            if last_built_revision.get("SHA1") == commit_id:
+                console_output_url = f"{build['url']}consoleText"
+                console_output_response = requests.get(console_output_url, auth=auth)
+                console_output = console_output_response.text if console_output_response.status_code == 200 else "Console output not available"
+                return build_details.get("result", "UNKNOWN"), console_output
+    
+    return None, "No matching build found."
+
+status, console_output = get_build_by_commit(JENKINS_URL, JOB_NAME, COMMIT_ID, USERNAME, PASSWORD)
+
+if status:
+    print(f"Build Status: {status}")
+    print("\nConsole Output:\n")
+    print(console_output)
+else:
+    print(console_output)
+
+
+---
+
+Explanation of the Script
+
+1. Authentication: Uses the service account username and password for Basic Authentication.
+
+
+2. Retrieve Builds: Fetches all builds for the job.
+
+
+3. Filter by Commit: Searches each build’s metadata for the matching commit ID (SHA1).
+
+
+4. Fetch Details: Retrieves the build status and console output for the matching build.
+
+
+
+
+---
+
+Notes
+
+1. Access Control: Ensure the service account has sufficient permissions (read access to the job and its metadata).
+
+
+2. Password Authentication: Some Jenkins servers may disable Basic Authentication with passwords. In such cases, you must generate an API token.
+
+
+3. Error Handling: The script includes basic error handling for API responses.
+
+
+
+Let me know if you need further assistance!
